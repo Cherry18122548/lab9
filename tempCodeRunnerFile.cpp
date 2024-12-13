@@ -25,9 +25,8 @@ int main(){
 	
 	//use 'fixed' and 'setprecision' to fix the number of decimal digits for displaying
 	//you can change input argument of 'setprecision()' to see the effect
-	nb = pre;
 
-	while(nb > 	 0){
+	while(nb != 0){
 		itr = pre*(rate/100);
 		total= pre +itr;
 		
@@ -36,15 +35,11 @@ int main(){
 		cout << setw(13) << left << pre;
 		cout << setw(13) << left << itr;
 		cout << setw(13) << left << total;
-		
 		if(total<Payment) Payment=total;
-
 		cout << setw(13) << left << Payment;
 		nb = total-Payment;
 		cout << setw(13) << left << nb;
 		pre = nb;
-
-		if(nb == 0 ) break;
 		i++;
 		cout << "\n";	
 		
